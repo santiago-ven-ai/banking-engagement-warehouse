@@ -1,7 +1,7 @@
 # banking-engagement-warehouse
 
-[![CI](https://github.com/Codemonster808/banking-engagement-warehouse/actions/workflows/ci.yml/badge.svg)](https://github.com/Codemonster808/banking-engagement-warehouse/actions/workflows/ci.yml)
-[![Coverage](https://img.shields.io/badge/coverage-18%25-orange)](https://github.com/Codemonster808/banking-engagement-warehouse/actions/workflows/ci.yml)
+[![CI](https://github.com/santiago-ven-ai/banking-engagement-warehouse/actions/workflows/ci.yml/badge.svg)](https://github.com/santiago-ven-ai/banking-engagement-warehouse/actions/workflows/ci.yml)
+[![Coverage](https://img.shields.io/badge/coverage-18%25-orange)](https://github.com/santiago-ven-ai/banking-engagement-warehouse/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
 A dimensional engagement warehouse for bank customer analytics — SCD Type 2 history, data quality gates that block bad loads, and per-pipeline cost/SLA attribution.
@@ -113,7 +113,7 @@ Deliberately. This is the SQL and dimensional-modeling core of the portfolio. Ad
 ## Installation
 
 ```bash
-git clone https://github.com/Codemonster808/banking-engagement-warehouse.git
+git clone https://github.com/santiago-ven-ai/banking-engagement-warehouse.git
 cd banking-engagement-warehouse
 python3 -m venv .venv && source .venv/bin/activate
 pip install -r requirements-dev.txt   # app deps + lint/type/security tooling
@@ -150,8 +150,8 @@ See [`docs/RUNBOOK.md`](docs/RUNBOOK.md) to run and understand the flow, or [`do
 
 ## Contributing
 
-Solo-maintained portfolio/demo repo — not actively seeking external contributions, but issues and questions are welcome via [GitHub Issues](https://github.com/Codemonster808/banking-engagement-warehouse/issues). See [`CODEOWNERS`](CODEOWNERS) and [`SECURITY.md`](SECURITY.md) for how reports are handled.
+Solo-maintained portfolio/demo repo — not actively seeking external contributions, but issues and questions are welcome via [GitHub Issues](https://github.com/santiago-ven-ai/banking-engagement-warehouse/issues). See [`CODEOWNERS`](CODEOWNERS) and [`SECURITY.md`](SECURITY.md) for how reports are handled.
 
 ## License
 
-[MIT](LICENSE) © Codemonster808
+[MIT](LICENSE) © santiago-ven-ai

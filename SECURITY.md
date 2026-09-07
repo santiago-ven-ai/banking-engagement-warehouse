@@ -11,7 +11,7 @@ response times.
 If you find a security issue in this repository (e.g. a dependency with a
 known CVE, or a credential accidentally committed), please open a GitHub
 issue or contact the maintainer directly via the profile linked on
-[Codemonster808](https://github.com/Codemonster808).
+[santiago-ven-ai](https://github.com/santiago-ven-ai).
 
 Since this project runs entirely against local infrastructure (MiniStack)
 with fake credentials and synthetic data, there is no bug bounty and no
