@@ -110,16 +110,7 @@ Deliberately. This is the SQL and dimensional-modeling core of the portfolio. Ad
 2. **Quality gates that block, not just report**: 6 seeded defect classes (nulls, cardinality drift, referential breaks, duplicates, out-of-range outliers, freshness failures) must each be caught before gold promotion.
 3. **Cost attribution on shared resources**: three synthetic pipelines share one cluster/bucket — tag-based allocation rules must split cost fairly and auditably.
 
-## Installation
-
-```bash
-git clone https://github.com/santiago-ven-ai/banking-engagement-warehouse.git
-cd banking-engagement-warehouse
-python3 -m venv .venv && source .venv/bin/activate
-pip install -r requirements-dev.txt   # app deps + lint/type/security tooling
-```
-
-## Usage — Demo (3 minutes)
+## Demo (3 minutes)
 
 ```bash
 source env.sh
@@ -130,16 +121,6 @@ make query
 terraform -chdir=terraform/azure init -backend=false && terraform -chdir=terraform/azure validate
 ```
 
-## Testing
-
-```bash
-make test                     # unit + integration + BDD (pytest-bdd), against real MiniStack
-make e2e                      # full pipeline, emits benchmarks/quality-report.json
-.venv/bin/pre-commit run --all-files   # ruff, mypy, whitespace/EOF checks
-```
-
-CI (`.github/workflows/ci.yml`) runs the same suite on every push, plus an isolated `security` job (`pip-audit`) and a coverage gate that fails the build under the threshold on the badge above — measured from a real run, not invented (see `docs/quality-report.md`).
-
 ## What this is NOT
 
 Not a dbt tutorial. What makes it engineering: SCD2 backfill correctness, gates that actually block bad data, and cost attributed to a specific pipeline — not just computed globally.
@@ -147,11 +128,3 @@ Not a dbt tutorial. What makes it engineering: SCD2 backfill correctness, gates 
 ## Build it yourself
 
 See [`docs/RUNBOOK.md`](docs/RUNBOOK.md) to run and understand the flow, or [`docs/BUILD_GUIDE.md`](docs/BUILD_GUIDE.md) to build from scratch.
-
-## Contributing
-
-Solo-maintained portfolio/demo repo — not actively seeking external contributions, but issues and questions are welcome via [GitHub Issues](https://github.com/santiago-ven-ai/banking-engagement-warehouse/issues). See [`CODEOWNERS`](CODEOWNERS) and [`SECURITY.md`](SECURITY.md) for how reports are handled.
-
-## License
-
-[MIT](LICENSE) © santiago-ven-ai
